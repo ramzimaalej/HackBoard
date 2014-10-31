@@ -29,6 +29,26 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'classLevel', 'error')} required">
+    <label for="classLevel">
+        <g:message code="user.classLevel.label" default="Class level" />
+        <span class="required-indicator">*</span>
+    </label>
+    <!--g:field type="classLevel" name="classLevel" required="" value="${userInstance?.classLevel}"/-->
+
+    <g:select name="classLevel" from="${smartcity.ClassLevel.values()}" value="${userInstance?.classLevel}"></g:select>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'studentId', 'error')} required">
+    <label for="studentId">
+        <g:message code="user.studentId.label" default="Student Id" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:textField name="studentId" required="" value="${userInstance?.studentId}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
 	<label for="username">
 		<g:message code="user.username.label" default="Username" />

@@ -85,7 +85,9 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><g:link class="list" action="index" controller="project"><g:message code="default.list.label" args="['Projects']" /></g:link></li>
-                <li><g:link class="create" action="create" controller="user"><g:message code="user.register" /></g:link></li>
+                <sec:ifNotLoggedIn>
+                    <li><g:link class="create" action="create" controller="user"><g:message code="user.register" /></g:link></li>
+                </sec:ifNotLoggedIn>
             </ul>
         </div>
 	</body>

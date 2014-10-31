@@ -1,3 +1,4 @@
+import smartcity.ClassLevel
 import smartcity.Role
 import smartcity.User
 import smartcity.UserRole
@@ -6,7 +7,8 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        User user = new User(firstname: 'Ramzi', lastname:'Maalej', email: 'ramzi.maalej@gmail.com', hasMobile: true, username: 'rmaalej', password: 'Sfax2014')
+        User user = new User(firstname: 'Ramzi', lastname:'Maalej', email: 'ramzi.maalej@gmail.com',
+                hasMobile: true, username: 'rmaalej', password: 'Sfax2014', classLevel: ClassLevel.SECOND, studentId: 'GI1234567')
         user.save()
         Role role = new Role(authority: 'ROLE_ADMIN')
         role.save()

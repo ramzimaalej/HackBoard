@@ -9,7 +9,7 @@ class Project {
 
     static constraints = {
         title blank: false
-        description blank: false, minSize: 100
+        description blank: false, minSize: 100, maxSize: 1500
     }
 
     @Override

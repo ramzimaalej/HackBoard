@@ -48,7 +48,11 @@ class UserController {
             return
         }
 
-        userInstance.save flush:true
+        User.withTransaction {
+            userInstance.save flush:true
+            Role role = Role.findByAuthority("ROLE_USER")
+            UserRole userRole = new UserRole(user: userInstance, role: role).save(flush: true)
+        }
 
         request.withFormat {
             form multipartForm {
@@ -59,7 +63,7 @@ class UserController {
         }
     }
 
-    @Secured(["ROLE"])
+    @Secured(["ROLE_ADMIN"])
     def edit(User userInstance) {
 
         def principal = springSecurityService.principal
