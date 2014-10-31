@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Hackathon - SmartCity - ENIS - 2014</title>
+		<title>Hackathon - DigitalCity - ENIS - 2014</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -86,8 +86,53 @@
             <ul>
                 <li><g:link class="list" action="index" controller="project"><g:message code="default.list.label" args="['Projects']" /></g:link></li>
                 <sec:ifNotLoggedIn>
+                    <li><g:link class="list" uri="/login"><g:message code="user.login" /></g:link></li>
                     <li><g:link class="create" action="create" controller="user"><g:message code="user.register" /></g:link></li>
                 </sec:ifNotLoggedIn>
+                <sec:ifLoggedIn>
+                    <li><g:remoteLink class="logout" controller="logout" asynchronous="false">${message(code: 'springSecurity.logout.link')}</g:remoteLink></li>
+                </sec:ifLoggedIn>
+            </ul>
+        </div>
+        <div style="padding:10px 5px 10px 5px;">
+            <h1>Présentation</h1>
+            <p>
+                Sous l'égide de l'ENIS, le Hackathon DIGIC (DIGItal City) est organisé, et est soutenu par ses partenaires, afin de promouvoir l’innovation et la création d’entreprise. 10 équipes de 4 participants seront réunies pour proposer des
+                solutions pratiques aux
+                problèmes des
+                résidents et des visiteurs de la ville de Sfax.
+            </p>
+            <h1>Programme</h1>
+            <ul style="padding:0px 20px 10px 20px">
+                <li>
+                    <h2>Jeudi 06/11/2014</h2>
+                    <p>
+                        16h:00 Cérémonie d'ouverture <br/>
+                        16h:20 Présenation des idées <br/>
+                        17h:00 Formation des équipes <br/>
+                        17h:15 Pause café et résautage <br/>
+                    </p>
+                </li>
+                <li>
+                    <h2>Vendredi 07/11/2014</h2>
+                    <p>
+                        09h:00 Petit-déjeuner <br/>
+                        09h:30 Démarrage des activités <br/>
+                        12h:00 Déjeuner <br/>
+                        14h:00 Visite des coaches (Tour de table)<br/>
+                    </p>
+                </li>
+                <li>
+                    <h2>Samedi 08/11/2014</h2>
+                    <p>
+                        09h:00 Petit-déjeuner <br/>
+                        11h:00 Visite des coaches (Tour de table)<br/>
+                        12h:00 Déjeuner <br/>
+                        14h:00 Pré-présentation des travaux aux coaches <br/>
+                        15h:00 Présentation des travaux au jury <br/>
+                        16h:00 Délibération et annonce des gagnants <br/>
+                    </p>
+                </li>
             </ul>
         </div>
 	</body>

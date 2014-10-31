@@ -40,7 +40,7 @@
 
                         <td>${fieldValue(bean: projectInstance, field: "owner")}</td>
 
-                        <td>${fieldValue(bean: projectInstance, field: "description")}</td>
+                        <td>${fieldValue(bean: projectInstance, field: "description").subSequence(0,75)} ...</td>
 
 					</tr>
 				</g:each>

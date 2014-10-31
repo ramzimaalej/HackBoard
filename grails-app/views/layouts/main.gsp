@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Hackathon - SmartCity - ENIS - 2014"/></title>
+		<title><g:layoutTitle default="Hackathon - DigitalCity - ENIS - 2014"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
@@ -17,14 +17,14 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="/">
+		<div id="grailsLogo" role="banner">
 
-            <!-- asset:image src="grails_logo.png" alt="Hackathon - SmartCity - ENIS - 2014"/></a -->
+            <!-- asset:image src="grails_logo.png" alt="Hackathon - DigitalCity - ENIS - 2014"/></a -->
 
-            <!-- asset:image src="o-SFAX.jpg" alt="Hackathon - SmartCity - ENIS - 2014" height="200px" / -->
+            <!-- asset:image src="o-SFAX.jpg" alt="Hackathon - DigitalCity - ENIS - 2014" height="200px" / -->
         </div>
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo">Hackathon - SmartCity - ENIS - 2014</div>
+		<div class="footer" role="contentinfo">Hackathon - DigitalCity - ENIS - 2014</div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 	</body>
 </html>

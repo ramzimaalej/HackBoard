@@ -20,7 +20,8 @@ class ProjectController {
 
     @Secured(["ROLE_USER"])
     def show(Project projectInstance) {
-        respond projectInstance
+        def list = UserProject.findAllByProject(projectInstance)
+        respond projectInstance, model: [participantList: list]
     }
 
     @Secured(["ROLE_USER"])
@@ -53,6 +54,28 @@ class ProjectController {
     }
 
     @Secured(["ROLE_USER"])
+    @Transactional
+    def participate(Project projectInstance) {
+        if(!projectInstance.owner.username.equals(springSecurityService.principal.username)) {
+            def user = User.findByUsername(springSecurityService.principal.username)
+            UserProject userProject = new UserProject(user: user, project: projectInstance)
+            userProject.save(flush: true)
+            redirect(action: 'show', id: projectInstance.id)
+            return
+        }
+    }
+
+    @Secured(["ROLE_USER"])
+    @Transactional
+    def leave(Project projectInstance) {
+        def user = User.findByUsername(springSecurityService.principal.username)
+        UserProject userProject = new UserProject(user: user, project: projectInstance)
+        userProject.delete(flush: true)
+        redirect(action: 'show', id: projectInstance.id)
+        return
+    }
+
+    @Secured(["ROLE_USER"])
     def edit(Project projectInstance) {
         respond projectInstance
     }
@@ -68,7 +91,7 @@ class ProjectController {
         def principal = springSecurityService.principal
 
         if(!principal.username.equals(projectInstance.owner.username)) {
-            notFound()
+            missingPermission()
             return
         }
 
@@ -100,7 +123,7 @@ class ProjectController {
         def principal = springSecurityService.principal
 
         if(!principal.username.equals(projectInstance.owner.username)) {
-            notFound()
+            missingPermission()
             return
         }
 
@@ -122,6 +145,16 @@ class ProjectController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+        }
+    }
+
+    protected void missingPermission() {
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.missing.permission.message', args: [message(code: 'project.label', default: 'Project'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: METHOD_NOT_ALLOWED }
         }
     }
 }

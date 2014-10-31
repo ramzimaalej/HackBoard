@@ -118,19 +118,21 @@ log4j.main = {
 
 
 // Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.auth.loginFormUrl = '/login'
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'smartcity.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'smartcity.UserRole'
 grails.plugin.springsecurity.authority.className = 'smartcity.Role'
 grails.plugin.springsecurity.securityConfigType = "Annotation"
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+	'/login':                         ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
 ]
 
 grails.plugin.springsecurity.roleHierarchy = '''

@@ -18,15 +18,12 @@ class UserController {
         respond User.list(params), model:[userInstanceCount: User.count()]
     }
 
-    @Secured(["ROLE_USER"])
+    @Secured(["permitAll"])
     def show(User userInstance) {
-        def principal = springSecurityService.principal
-
-        if(userInstance == null || !userInstance.username.equals(principal.username)) {
+        if(userInstance == null) {
             notFound()
             return
         }
-
         respond userInstance
     }
 
@@ -63,13 +60,18 @@ class UserController {
         }
     }
 
-    @Secured(["ROLE_ADMIN"])
+    @Secured(["ROLE_USER"])
     def edit(User userInstance) {
 
         def principal = springSecurityService.principal
 
-        if(userInstance == null || !userInstance.username.equals(principal.username)) {
+        if(userInstance == null) {
             notFound()
+            return
+        }
+
+        if(!userInstance.username.equals(principal.username)) {
+            missingPermission()
             return
         }
 
@@ -135,6 +137,16 @@ class UserController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+        }
+    }
+
+    protected void missingPermission() {
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.missing.permission.message', args: [message(code: 'project.label', default: 'Project'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: METHOD_NOT_ALLOWED }
         }
     }
 }

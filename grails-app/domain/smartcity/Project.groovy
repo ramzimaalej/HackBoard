@@ -5,7 +5,7 @@ class Project {
     String title
     String description
 
-    User owner
+    static belongsTo = [owner:User]
 
     static constraints = {
         title blank: false
