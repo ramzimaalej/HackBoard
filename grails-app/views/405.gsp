@@ -3,13 +3,11 @@
 	<head>
 		<title>Method not allowed</title>
 		<meta name="layout" content="main">
-		<g:if env="development"><asset:stylesheet src="errors.css"/></g:if>
+		<asset:stylesheet src="errors.css"/>
 	</head>
 	<body>
-		<g:else>
-			<ul class="errors">
-				<li>${flash.message}</li>
-			</ul>
-		</g:else>
-	</body>
+        <ul class="errors">
+            <li>${flash.message}</li>
+        </ul>
+    </body>
 </html>
