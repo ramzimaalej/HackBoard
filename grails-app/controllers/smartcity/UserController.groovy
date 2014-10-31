@@ -143,7 +143,7 @@ class UserController {
     protected void missingPermission() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.missing.permission.message', args: [message(code: 'project.label', default: 'Project'), params.id])
+                flash.message = message(code: 'default.missing.permission.message', args: [message(code: 'user.label', default: 'User'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: METHOD_NOT_ALLOWED }

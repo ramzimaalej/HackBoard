@@ -77,6 +77,14 @@ class ProjectController {
 
     @Secured(["ROLE_USER"])
     def edit(Project projectInstance) {
+
+        def principal = springSecurityService.principal
+
+        if(!projectInstance.owner.username.equals(principal.username)) {
+            missingPermission()
+            return
+        }
+
         respond projectInstance
     }
 
@@ -85,13 +93,6 @@ class ProjectController {
     def update(Project projectInstance) {
         if (projectInstance == null) {
             notFound()
-            return
-        }
-
-        def principal = springSecurityService.principal
-
-        if(!principal.username.equals(projectInstance.owner.username)) {
-            missingPermission()
             return
         }
 
@@ -127,7 +128,10 @@ class ProjectController {
             return
         }
 
-        projectInstance.delete flush:true
+        Project.withTransaction {
+            UserProject.findAllByProject(projectInstance)*.delete()
+            projectInstance.delete flush:true
+        }
 
         request.withFormat {
             form multipartForm {
