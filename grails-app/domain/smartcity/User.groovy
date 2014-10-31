@@ -6,7 +6,8 @@ class User {
     String firstname
     String lastname
     String email
-    ClassLevel classLevel
+    String university
+    String classLevel
     String studentId
     boolean hasMobile
 	String username
@@ -23,6 +24,7 @@ class User {
 	static constraints = {
         firstname blank: false
         lastname blank: false
+        university blank: false
         classLevel blank: false
         studentId blank: false
         email email: true, unique: true
