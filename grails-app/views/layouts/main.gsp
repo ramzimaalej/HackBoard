@@ -22,6 +22,13 @@
             <!-- asset:image src="grails_logo.png" alt="Hackathon - DigitalCity - ENIS - 2014"/></a -->
 
             <!-- asset:image src="o-SFAX.jpg" alt="Hackathon - DigitalCity - ENIS - 2014" height="200px" / -->
+            <div style="padding:10px 10px 10px 10px; text-align:center;">
+                <p style="color: #0D7BBF; font-size: 36px;">Hackathon DIGIC - 2014</p>
+                <p>
+                    06-08 Novembre • ENIS • Sfax/Tunisie
+                </p>
+            </div>
+
         </div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">Hackathon - DigitalCity - ENIS - 2014</div>

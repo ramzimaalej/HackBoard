@@ -134,6 +134,33 @@
                     </p>
                 </li>
             </ul>
+            <h1>Coaches</h1>
+            <ul style="padding:0px 40px 10px 40px">
+                <li>
+                    <p>Slim Ben Hammouda: Sifast-chef du pôle mobile</p>
+                </li>
+                <li>
+                    <p>Noureddine Loukil: Maître-assisant FSS et chef d'entreprise</p>
+                </li>
+                <li>
+                    <p>Ramzi Maalej: Consultant Agile Management - Canada</p>
+                </li>
+                <li>
+                    <p>Riadh Ben Halima: Maître assistant ENIS</p>
+                </li>
+            </ul>
+            <h1>Jury</h1>
+            <ul style="padding:0px 40px 10px 40px">
+                <li>
+                    <p>Habib Kammoun: GDG Sfax Manager</p>
+                </li>
+                <li>
+                    <p>Anis Samet: Directeur de Sifast</p>
+                </li>
+                <li>
+                    <p>Chafik Loukil: Président de l'AIDENIS</p>
+                </li>
+            </ul>
         </div>
 	</body>
 </html>
