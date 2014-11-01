@@ -78,6 +78,9 @@
             <h1>Jury</h1>
             <ul style="padding:0px 40px 10px 40px">
                 <li>
+                    <p>Mohamed Jmaiel: Directeur du Centre de recherche sur les TIC</p>
+                </li>
+                <li>
                     <p>Habib Kammoun: GDG Sfax Manager</p>
                 </li>
                 <li>
