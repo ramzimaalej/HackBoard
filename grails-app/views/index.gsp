@@ -21,7 +21,7 @@
         <div style="padding:10px 5px 10px 5px;">
             <h1>Présentation</h1>
             <p>
-                Sous l'égide de l'ENIS, le <a href="https://drive.google.com/file/d/0B7xQw2T9dRJLRjhDWERvak9QYU0/view?usp=sharing">Hackathon DIGIC (DIGItal City)</a> est organisé, et est soutenu par ses partenaires, afin de promouvoir l’innovation et la création d’entreprise. 10 équipes de 4 participants seront réunies pour
+                Sous l'égide de l'ENIS, le <a href="https://drive.google.com/file/d/0B7xQw2T9dRJLZ20xNFFhQVV3cW8/view?usp=sharing">Hackathon DIGIC (DIGItal City)</a> est organisé, et est soutenu par ses partenaires, afin de promouvoir l’innovation et la création d’entreprise. 10 équipes de 4 participants seront réunies pour
             proposer
             des
                 solutions pratiques aux
