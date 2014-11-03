@@ -74,6 +74,9 @@
                 <li>
                     <p>Riadh Ben Halima: Maître assistant ENIS</p>
                 </li>
+                <li>
+                    <p>Mohamed Amin Kallel: Directeur - Stratos Consultants</p>
+                </li>
             </ul>
             <h1>Jury</h1>
             <ul style="padding:0px 40px 10px 40px">
@@ -88,6 +91,9 @@
                 </li>
                 <li>
                     <p>Chafik Loukil: Président de l'AIDENIS</p>
+                </li>
+                <li>
+                    <p>Mohamed MEDHAFFAR: Professeur FSS - Chef d'entreprise</p>
                 </li>
             </ul>
             <h1>Sponsors</h1>
