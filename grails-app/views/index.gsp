@@ -101,7 +101,6 @@
                 <asset:image src="sponsors/enis.png" height="40px" width="40px"/>
                 <asset:image src="sponsors/aidenis.jpg" height="40px" width="40px"/>
                 <asset:image src="sponsors/acm.jpg" height="40px" width="40px"/>
-                <asset:image src="sponsors/arts.png" height="40px" width="40px"/>
                 <asset:image src="sponsors/sfax.png" height="40px" width="40px"/>
                 <asset:image src="sponsors/ieee.jpg" height="40px" width="100px"/>
                 <asset:image src="sponsors/ieee-enis.jpg" height="40px" width="100px"/>
