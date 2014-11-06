@@ -21,7 +21,7 @@
         <div style="padding:10px 5px 10px 5px;">
             <h1>Présentation</h1>
             <p>
-                Sous l'égide de l'ENIS, le <a href="https://drive.google.com/file/d/0B7xQw2T9dRJLZ20xNFFhQVV3cW8/view?usp=sharing">Hackathon DIGIC (DIGItal City)</a> est organisé, et est soutenu par ses partenaires, afin de promouvoir l’innovation et la création d’entreprise. 10 équipes de 4 participants seront réunies pour
+                Sous l'égide de l'ENIS, le <a href="https://drive.google.com/file/d/0B7xQw2T9dRJLdFVtbVdNVXhNOVE/view?usp=sharing">Hackathon DIGIC (DIGItal City)</a> est organisé, et est soutenu par ses partenaires, afin de promouvoir l’innovation et la création d’entreprise. 10 équipes de 4 participants seront réunies pour
             proposer
             des
                 solutions pratiques aux
@@ -66,7 +66,7 @@
                     <p>Slim Ben Hammouda: Sifast-chef du pôle mobile</p>
                 </li>
                 <li>
-                    <p>Noureddine Loukil: Maître-assisant FSS et chef d'entreprise</p>
+                    <p>Mohamed Amri: Maître-assisant FSS</p>
                 </li>
                 <li>
                     <p>Ramzi Maalej: Consultant Agile Management - Canada</p>
@@ -94,6 +94,9 @@
                 </li>
                 <li>
                     <p>Mohamed MEDHAFFAR: Professeur FSS - Chef d'entreprise</p>
+                </li>
+                <li>
+                    <p>Amin Ben Abdallah: Telnet</p>
                 </li>
             </ul>
             <h1>Sponsors</h1>
